@@ -1,6 +1,6 @@
 # Danilo Jesus
 
-Sou Danilo, e meu apelido é Jesus e atualmente curso Engenharia de Software. Aqui embaixo há algumas metricas de projetos meus, exercícios e testes de programação. Estou construindo minha base aos poucos e aprendendo comforme a curiosidade avança.
+Sou Danilo, e meu apelido é Jesus e atualmente curso Engenharia de Software. Aqui embaixo há algumas metricas de projetos meus, exercícios e testes de programação. Estou construindo minha base aos poucos e aprendendo conforme a curiosidade avança.
 
 ## Painel do perfil
 
