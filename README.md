@@ -15,4 +15,3 @@ Sou Danilo, e meu apelido é Jesus e atualmente curso Engenharia de Software. Aq
   <img src="./assets/github-profile-file-types.svg" alt="Tipos de arquivo" />
 </p>
 
-Dados públicos do perfil e forks não entram na análise.
