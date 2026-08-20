@@ -14,7 +14,6 @@ Este projeto é um painel de perfil para o repositório especial do GitHub. Ele 
 | `assets/github-languages.svg` | Principais linguagens dos repositórios públicos. |
 | `assets/github-activity.svg` | Linha de atividade dos últimos 30 dias. |
 | `assets/github-ecosystem.svg` | Linguagens, tipos de arquivo, arquivos totais e famílias do ecossistema público. |
-| `docs/AI-PROMPTS.md` | Prompts prontos para personalização e manutenção. |
 
 ## Primeira ativação
 
@@ -47,7 +46,7 @@ O script consulta apenas dados públicos e pode fazer várias chamadas à API po
 
 As duas atualizações estão programadas para uma vez por semana, aos domingos. Também é possível executá-las manualmente por `workflow_dispatch`. O analisador de ecossistema consulta a lista paginada de repositórios públicos próprios, o endpoint de linguagens e a árvore recursiva do branch padrão de cada repositório. Árvores com `truncated: true` e repositórios que falham são indicados no cartão e não interrompem necessariamente as demais análises.
 
-Os scripts ignoram o carimbo de hora quando comparam os SVGs antigos com os novos. Assim, uma execução semanal sem alteração nas métricas termina sem criar commit. O projeto não possui monitor de outros repositórios, gerador de commits, contador de streak artificial ou rotina de milhares de commits.
+Os scripts ignoram o carimbo de hora quando comparam os SVGs antigos com os novos. Assim, uma execução semanal sem alteração nas métricas termina sem criar commit. O projeto não monitora outros repositórios, não cria commits sem alteração e não gera atividade falsa.
 
 ## Personalizar o perfil
 
