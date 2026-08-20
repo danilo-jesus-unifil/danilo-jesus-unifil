@@ -1,6 +1,6 @@
 # Danilo Jesus
 
-Sou Danilo Jesus e estudo desenvolvimento de software. Aqui ficam meus projetos, exercícios e testes de programação. Estou construindo minha base aos poucos e aprendendo com cada projeto.
+Sou Danilo, e meu apelido é Jesus e atualmente curso Engenharia de Software. Aqui embaixo há algumas metricas de projetos meus, exercícios e testes de programação. Estou construindo minha base aos poucos e aprendendo comforme a curiosidade avança.
 
 ## Painel do perfil
 
@@ -8,4 +8,4 @@ Sou Danilo Jesus e estudo desenvolvimento de software. Aqui ficam meus projetos,
   <img src="./assets/github-profile.svg" alt="Perfil do Github" />
 </p>
 
-Dados públicos do perfil; forks não entram na análise.
+Dados públicos do perfil e forks não entram na análise.
