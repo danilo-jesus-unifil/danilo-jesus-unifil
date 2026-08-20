@@ -5,7 +5,15 @@ Sou Danilo, e meu apelido é Jesus e atualmente curso Engenharia de Software. Aq
 ## Painel do perfil
 
 <p align="center">
-  <img src="./assets/github-profile.svg" alt="Perfil do Github" />
+  <img src="./assets/github-profile-metrics.svg" alt="Perfil do Github" />
+</p>
+
+<p align="center">
+  <img src="./assets/github-profile-languages.svg" alt="Linguagens mais usadas" />
+</p>
+
+<p align="center">
+  <img src="./assets/github-profile-file-types.svg" alt="Tipos de arquivo" />
 </p>
 
 Dados públicos do perfil e forks não entram na análise.

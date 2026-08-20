@@ -33,7 +33,11 @@ from linguist_catalog import (
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "assets"
-OUTPUT = ASSETS / "github-profile.svg"
+OUTPUTS = {
+    "metrics": ASSETS / "github-profile-metrics.svg",
+    "languages": ASSETS / "github-profile-languages.svg",
+    "file_types": ASSETS / "github-profile-file-types.svg",
+}
 USER = os.environ.get("GH_USER", "danilo-jesus-unifil")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 API_URL = "https://api.github.com"
@@ -392,104 +396,101 @@ def frame(width: int, height: int) -> list[str]:
     ]
 
 
+def card_frame(width: int, height: int, label: str) -> list[str]:
+    return [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-label="{esc(label)}">',
+        '<defs><linearGradient id="profile-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e0c16"/><stop offset="1" stop-color="#0b0910"/></linearGradient></defs>',
+        '<rect width="100%" height="100%" rx="14" fill="url(#profile-bg)"/>',
+        f'<rect x="5" y="5" width="{width - 10}" height="{height - 10}" rx="11" fill="none" stroke="{GOLD}" stroke-opacity="0.35"/>',
+    ]
+
+
+def close_svg(lines: list[str]) -> str:
+    lines.append('</svg>')
+    return "\n".join(lines) + "\n"
+
+
 def metric_card(x: int, y: int, width: int, label: str, value: object, color: str) -> str:
     value_text = compact(value, 14)
-    value_size = 20 if len(value_text) <= 10 else 16
+    value_size = 23 if len(value_text) <= 10 else 18
     return "".join(
         [
             f'<rect x="{x}" y="{y}" width="{width}" height="66" rx="8" fill="{SURFACE}" stroke="{GOLD}" stroke-opacity="0.22"/>',
-            f'<text x="{x + 13}" y="{y + 29}" fill="{color}" font-family="{FONT_FAMILY}" font-size="{value_size}" font-weight="700">{esc(value_text)}</text>',
-            f'<text x="{x + 13}" y="{y + 51}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="8.5" letter-spacing="0.5">{esc(label)}</text>',
+            f'<text x="{x + 14}" y="{y + 30}" fill="{color}" font-family="{FONT_FAMILY}" font-size="{value_size}" font-weight="700">{esc(value_text)}</text>',
+            f'<text x="{x + 14}" y="{y + 53}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="10.5" letter-spacing="0.35">{esc(label)}</text>',
         ]
     )
 
 
-def panel(lines: list[str], x: int, y: int, width: int, height: int, title: str) -> None:
+def metrics_svg(data: dict) -> str:
+    width, height = 520, 240
+    lines = card_frame(width, height, "Perfil do Github")
     lines.extend(
         [
-            f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="10" fill="{BG}" fill-opacity="0.52" stroke="{GOLD}" stroke-opacity="0.24"/>',
-            f'<text x="{x + 14}" y="{y + 22}" fill="{GOLD_LIGHT}" font-family="{FONT_FAMILY}" font-size="10" font-weight="700" letter-spacing="0.7">{esc(title)}</text>',
-            f'<line x1="{x + 12}" y1="{y + 34}" x2="{x + width - 12}" y2="{y + 34}" stroke="{GOLD}" stroke-opacity="0.18"/>',
+            f'<text x="28" y="35" fill="{GOLD_LIGHT}" font-family="{FONT_FAMILY}" font-size="15" font-weight="700" letter-spacing="1.2">Perfil do Github</text>',
+            f'<line x1="24" y1="54" x2="{width - 24}" y2="54" stroke="{GOLD}" stroke-opacity="0.25"/>',
         ]
     )
-
-
-def bar_row(lines: list[str], x: int, y: int, width: int, label: str, percent: float, detail: str, color: str, label_width: int) -> None:
-    info_width = 112
-    track_x = x + label_width
-    info_x = x + width - info_width
-    track_width = max(24, info_x - track_x - 12)
-    fill_width = max(2, int(track_width * max(0.0, min(100.0, percent)) / 100.0))
-    lines.extend(
-        [
-            f'<text x="{x + 14}" y="{y + 11}" fill="{PARCHMENT}" font-family="{FONT_FAMILY}" font-size="9.5">{esc(compact(label, 18))}</text>',
-            f'<rect x="{track_x}" y="{y + 3}" width="{track_width}" height="9" rx="4.5" fill="{SURFACE}"/>',
-            f'<rect x="{track_x}" y="{y + 3}" width="{fill_width}" height="9" rx="4.5" fill="{color}"/>',
-            f'<text x="{info_x}" y="{y + 11}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="8">{esc(detail)}</text>',
-        ]
-    )
-
-
-def ecosystem_svg(data: dict) -> str:
-    width, height = 880, 435
-    lines = frame(width, height)
     metric_values = [
         ("Linguagens", len(data["languages"]), GREEN),
-        ("Tipos de arquivo", len(data["file_types"]), GOLD_LIGHT),
         ("Repositórios analisados", data["analyzed_repositories"], PURPLE),
         ("Códigos no total", human_bytes(data["code_bytes"]), GOLD),
         ("Total de arquivos", data["total_files"], RED),
     ]
-    metric_width = 160
-    for index, (label, value, color) in enumerate(metric_values):
-        lines.append(metric_card(24 + index * 168, 68, metric_width, label, value, color))
+    positions = [(24, 70), (264, 70), (24, 145), (264, 145)]
+    for (label, value, color), (x, y) in zip(metric_values, positions):
+        lines.append(metric_card(x, y, 232, label, value, color))
+    lines.append(f'<line x1="24" y1="232" x2="{width - 24}" y2="232" stroke="{GOLD}" stroke-opacity="0.25"/>')
+    return close_svg(lines)
 
-    left_x, right_x, panel_y, panel_w, panel_h = 24, 452, 147, 404, 250
-    panel(lines, left_x, panel_y, panel_w, panel_h, "Linguagens mais usadas")
-    panel(lines, right_x, panel_y, panel_w, panel_h, "Tipos de arquivo")
 
-    languages = list(data["languages"].items())[:8]
-    language_total = data["code_bytes"] or 1
-    if languages:
-        for index, (language, size) in enumerate(languages):
-            percent = size / language_total * 100
-            bar_row(
-                lines,
-                left_x,
-                panel_y + 46 + index * 23,
-                panel_w,
-                language,
-                percent,
-                f"{percent:.1f}% · {human_bytes(size)}",
-                LANGUAGE_COLORS.get(language, FALLBACK_COLORS[index % len(FALLBACK_COLORS)]),
-                122,
-            )
-    else:
-        lines.append(f'<text x="{left_x + 14}" y="{panel_y + 65}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="9">Nenhuma linguagem retornada</text>')
+def ranking_row(lines: list[str], x: int, y: int, width: int, label: str, percent: float, detail: str, color: str) -> None:
+    track_x = x + 145
+    info_x = x + width - 122
+    track_width = info_x - track_x - 12
+    fill_width = max(2, int(track_width * max(0.0, min(100.0, percent)) / 100.0))
+    lines.extend(
+        [
+            f'<text x="{x + 14}" y="{y + 11}" fill="{PARCHMENT}" font-family="{FONT_FAMILY}" font-size="11">{esc(compact(label, 22))}</text>',
+            f'<rect x="{track_x}" y="{y + 2}" width="{track_width}" height="11" rx="5.5" fill="{SURFACE}"/>',
+            f'<rect x="{track_x}" y="{y + 2}" width="{fill_width}" height="11" rx="5.5" fill="{color}"/>',
+            f'<text x="{info_x}" y="{y + 11}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="9">{esc(detail)}</text>',
+        ]
+    )
 
-    file_types = list(data["file_types"].items())[:10]
-    file_total = data["total_files"] or 1
-    if file_types:
-        for index, (file_type, count) in enumerate(file_types):
-            percent = count / file_total * 100
-            bar_row(
-                lines,
-                right_x,
-                panel_y + 46 + index * 19,
-                panel_w,
-                pretty_file_type(file_type),
-                percent,
-                f"{percent:.1f}% · {count} arq.",
-                FILE_TYPE_COLORS.get(file_type.casefold(), [GOLD_LIGHT, GOLD, GREEN, PURPLE, RED, BLUE][index % 6]),
-                78,
-            )
-    else:
-        lines.append(f'<text x="{right_x + 14}" y="{panel_y + 65}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="9">Nenhum arquivo retornado</text>')
 
-    footer = f"Última atualização: {data['generated'].replace(' ', ' às ')}"
-    lines.append(f'<text x="24" y="420" fill="{DIM}" font-family="{FONT_FAMILY}" font-size="8.5">{esc(footer)}</text>')
-    lines.append("</svg>")
-    return "\n".join(lines) + "\n"
+def ranking_svg(data: dict, kind: str, limit: int = 20) -> str:
+    is_language = kind == "languages"
+    title = "Linguagens mais usadas" if is_language else "Tipos de arquivo"
+    items = list(data["languages"].items()) if is_language else list(data["file_types"].items())
+    items = items[:limit]
+    row_step = 18
+    include_footer = not is_language
+    height = 76 + row_step * max(1, len(items)) + (40 if include_footer else 22)
+    width = 520
+    lines = card_frame(width, height, title)
+    lines.append(f'<rect x="7" y="7" width="{width - 14}" height="{height - 14}" rx="10" fill="{BG}" fill-opacity="0.52" stroke="{GOLD}" stroke-opacity="0.24"/>')
+    lines.append(f'<text x="21" y="33" fill="{GOLD_LIGHT}" font-family="{FONT_FAMILY}" font-size="12" font-weight="700" letter-spacing="0.65">{esc(title)}</text>')
+    lines.append(f'<line x1="19" y1="48" x2="{width - 21}" y2="48" stroke="{GOLD}" stroke-opacity="0.18"/>')
+
+    total = (data["code_bytes"] if is_language else data["total_files"]) or 1
+    for index, (item, value) in enumerate(items):
+        numeric = int(value)
+        percent = numeric / total * 100
+        if is_language:
+            detail = f"{percent:.1f}% · {human_bytes(numeric)}"
+            color = LANGUAGE_COLORS.get(item, FALLBACK_COLORS[index % len(FALLBACK_COLORS)])
+            label = item
+        else:
+            detail = f"{percent:.1f}% · {numeric} arq."
+            color = FILE_TYPE_COLORS.get(item.casefold(), FALLBACK_COLORS[index % len(FALLBACK_COLORS)])
+            label = pretty_file_type(item)
+        ranking_row(lines, 7, 58 + index * row_step, width - 14, label, percent, detail, color)
+
+    if include_footer:
+        footer = f"Última atualização: {data['generated'].replace(' ', ' às ')}"
+        lines.append(f'<text x="21" y="{height - 14}" fill="{DIM}" font-family="{FONT_FAMILY}" font-size="9">{esc(footer)}</text>')
+    return close_svg(lines)
 
 
 def stable_text(text: str) -> str:
@@ -506,7 +507,11 @@ def write_if_changed(path: Path, content: str) -> bool:
 
 def main() -> int:
     data = collect_ecosystem()
-    changed = write_if_changed(OUTPUT, ecosystem_svg(data))
+    changed = {
+        "metrics": write_if_changed(OUTPUTS["metrics"], metrics_svg(data)),
+        "languages": write_if_changed(OUTPUTS["languages"], ranking_svg(data, "languages", 20)),
+        "file_types": write_if_changed(OUTPUTS["file_types"], ranking_svg(data, "file_types", 20)),
+    }
     print(
         json.dumps(
             {

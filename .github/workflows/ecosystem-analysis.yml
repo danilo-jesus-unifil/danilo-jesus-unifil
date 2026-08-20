@@ -11,6 +11,7 @@ on:
       - ".github/scripts/ecosystem_analysis.py"
       - ".github/scripts/linguist_catalog.py"
       - ".github/workflows/ecosystem-analysis.yml"
+      - "README.md"
 
 concurrency:
   group: ecosystem-analysis
@@ -42,7 +43,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-profile.svg
+          git add assets/github-profile-metrics.svg assets/github-profile-languages.svg assets/github-profile-file-types.svg
           if git diff --cached --quiet; then
             echo "Nenhuma métrica do ecossistema mudou; nenhum commit será criado."
             exit 0

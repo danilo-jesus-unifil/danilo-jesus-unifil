@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 240" width="520" height="240" role="img" aria-label="Perfil do Github">
+<defs><linearGradient id="profile-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e0c16"/><stop offset="1" stop-color="#0b0910"/></linearGradient></defs>
+<rect width="100%" height="100%" rx="14" fill="url(#profile-bg)"/>
+<rect x="5" y="5" width="510" height="230" rx="11" fill="none" stroke="#d4a24e" stroke-opacity="0.35"/>
+<text x="28" y="35" fill="#e8c07a" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="15" font-weight="700" letter-spacing="1.2">Perfil do Github</text>
+<line x1="24" y1="54" x2="496" y2="54" stroke="#d4a24e" stroke-opacity="0.25"/>
+<rect x="24" y="70" width="232" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="38" y="100" fill="#3ddc84" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="23" font-weight="700">5</text><text x="38" y="123" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="10.5" letter-spacing="0.35">Linguagens</text>
+<rect x="264" y="70" width="232" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="278" y="100" fill="#a68dad" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="23" font-weight="700">6</text><text x="278" y="123" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="10.5" letter-spacing="0.35">Repositórios analisados</text>
+<rect x="24" y="145" width="232" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="38" y="175" fill="#d4a24e" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="23" font-weight="700">698.1 KB</text><text x="38" y="198" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="10.5" letter-spacing="0.35">Códigos no total</text>
+<rect x="264" y="145" width="232" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="278" y="175" fill="#e07a5f" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="23" font-weight="700">301</text><text x="278" y="198" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="10.5" letter-spacing="0.35">Total de arquivos</text>
+<line x1="24" y1="232" x2="496" y2="232" stroke="#d4a24e" stroke-opacity="0.25"/>
+</svg>
