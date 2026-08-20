@@ -8,7 +8,7 @@
 <rect x="192" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="205" y="97" fill="#e8c07a" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="20" font-weight="700">17</text><text x="205" y="119" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8.5" letter-spacing="0.5">Tipos de arquivo</text>
 <rect x="360" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="373" y="97" fill="#a68dad" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="20" font-weight="700">6</text><text x="373" y="119" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8.5" letter-spacing="0.5">Repositórios analisados</text>
 <rect x="528" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="541" y="97" fill="#d4a24e" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="20" font-weight="700">695.2 KB</text><text x="541" y="119" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8.5" letter-spacing="0.5">Códigos no total</text>
-<rect x="696" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="709" y="97" fill="#e07a5f" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="20" font-weight="700">295</text><text x="709" y="119" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8.5" letter-spacing="0.5">Total de arquivos</text>
+<rect x="696" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="709" y="97" fill="#e07a5f" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="20" font-weight="700">296</text><text x="709" y="119" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8.5" letter-spacing="0.5">Total de arquivos</text>
 <rect x="24" y="147" width="404" height="250" rx="10" fill="#0e0c16" fill-opacity="0.52" stroke="#d4a24e" stroke-opacity="0.24"/>
 <text x="38" y="169" fill="#e8c07a" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="10" font-weight="700" letter-spacing="0.7">Linguagens mais usadas</text>
 <line x1="36" y1="181" x2="416" y2="181" stroke="#d4a24e" stroke-opacity="0.18"/>
@@ -38,30 +38,30 @@
 <text x="466" y="204" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">.md</text>
 <rect x="530" y="196" width="202" height="9" rx="4.5" fill="#1d1729"/>
 <rect x="530" y="196" width="84" height="9" rx="4.5" fill="#083fa1"/>
-<text x="744" y="204" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">42.0% · 124 arq.</text>
+<text x="744" y="204" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">41.9% · 124 arq.</text>
 <text x="466" y="223" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">.rs</text>
 <rect x="530" y="215" width="202" height="9" rx="4.5" fill="#1d1729"/>
 <rect x="530" y="215" width="70" height="9" rx="4.5" fill="#dea584"/>
-<text x="744" y="223" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">34.9% · 103 arq.</text>
+<text x="744" y="223" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">34.8% · 103 arq.</text>
 <text x="466" y="242" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">.sh</text>
 <rect x="530" y="234" width="202" height="9" rx="4.5" fill="#1d1729"/>
 <rect x="530" y="234" width="17" height="9" rx="4.5" fill="#89e051"/>
-<text x="744" y="242" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">8.5% · 25 arq.</text>
+<text x="744" y="242" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">8.4% · 25 arq.</text>
 <text x="466" y="261" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">.toml</text>
 <rect x="530" y="253" width="202" height="9" rx="4.5" fill="#1d1729"/>
 <rect x="530" y="253" width="6" height="9" rx="4.5" fill="#9c4221"/>
-<text x="744" y="261" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">3.1% · 9 arq.</text>
+<text x="744" y="261" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">3.0% · 9 arq.</text>
 <text x="466" y="280" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">.slint</text>
 <rect x="530" y="272" width="202" height="9" rx="4.5" fill="#1d1729"/>
 <rect x="530" y="272" width="4" height="9" rx="4.5" fill="#2379F4"/>
 <text x="744" y="280" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">2.4% · 7 arq.</text>
-<text x="466" y="299" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">License</text>
+<text x="466" y="299" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">.py</text>
 <rect x="530" y="291" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="291" width="2" height="9" rx="4.5" fill="#8fa6c4"/>
-<text x="744" y="299" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">1.4% · 4 arq.</text>
-<text x="466" y="318" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">.py</text>
+<rect x="530" y="291" width="3" height="9" rx="4.5" fill="#3572A5"/>
+<text x="744" y="299" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">1.7% · 5 arq.</text>
+<text x="466" y="318" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">License</text>
 <rect x="530" y="310" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="310" width="2" height="9" rx="4.5" fill="#3572A5"/>
+<rect x="530" y="310" width="2" height="9" rx="4.5" fill="#8fa6c4"/>
 <text x="744" y="318" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">1.4% · 4 arq.</text>
 <text x="466" y="337" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9.5">.yml</text>
 <rect x="530" y="329" width="202" height="9" rx="4.5" fill="#1d1729"/>
@@ -75,5 +75,5 @@
 <rect x="530" y="367" width="202" height="9" rx="4.5" fill="#1d1729"/>
 <rect x="530" y="367" width="2" height="9" rx="4.5" fill="#a68dad"/>
 <text x="744" y="375" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8">1.0% · 3 arq.</text>
-<text x="24" y="420" fill="#77694f" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8.5">Última atualização: 20/08/2026 às 22:34</text>
+<text x="24" y="420" fill="#77694f" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="8.5">Última atualização: 20/08/2026 às 22:35</text>
 </svg>
