@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-ecosystem.svg
+          git add assets/github-profile.svg
           if git diff --cached --quiet; then
             echo "Nenhuma métrica do ecossistema mudou; nenhum commit será criado."
             exit 0

@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "assets"
-OUTPUT = ASSETS / "github-ecosystem.svg"
+OUTPUT = ASSETS / "github-profile.svg"
 USER = os.environ.get("GH_USER", "danilo-jesus-unifil")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
 API_URL = "https://api.github.com"
@@ -37,6 +37,7 @@ GREEN = "#3ddc84"
 PURPLE = "#a68dad"
 RED = "#e07a5f"
 BLUE = "#8fa6c4"
+FONT_FAMILY = "'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif"
 
 TIMESTAMP_RE = re.compile(r"\d{2}/\d{2}/\d{4} \d{2}:\d{2}")
 
@@ -371,7 +372,7 @@ def frame(width: int, height: int) -> list[str]:
         '<defs><linearGradient id="eco-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e0c16"/><stop offset="1" stop-color="#0b0910"/></linearGradient></defs>',
         '<rect width="100%" height="100%" rx="14" fill="url(#eco-bg)"/>',
         f'<rect x="5" y="5" width="{width - 10}" height="{height - 10}" rx="11" fill="none" stroke="{GOLD}" stroke-opacity="0.35"/>',
-        f'<text x="28" y="34" fill="{GOLD_LIGHT}" font-family="monospace" font-size="13" font-weight="700" letter-spacing="1.5">◆ {esc("Atividade do Github")}</text>',
+        f'<text x="28" y="34" fill="{GOLD_LIGHT}" font-family="{FONT_FAMILY}" font-size="13" font-weight="700" letter-spacing="1.5">{esc("Perfil do Github")}</text>',
         f'<line x1="24" y1="52" x2="856" y2="52" stroke="{GOLD}" stroke-opacity="0.25"/>',
     ]
 
@@ -382,8 +383,8 @@ def metric_card(x: int, y: int, width: int, label: str, value: object, color: st
     return "".join(
         [
             f'<rect x="{x}" y="{y}" width="{width}" height="66" rx="8" fill="{SURFACE}" stroke="{GOLD}" stroke-opacity="0.22"/>',
-            f'<text x="{x + 13}" y="{y + 29}" fill="{color}" font-family="monospace" font-size="{value_size}" font-weight="700">{esc(value_text)}</text>',
-            f'<text x="{x + 13}" y="{y + 51}" fill="{MUTED}" font-family="monospace" font-size="8.5" letter-spacing="0.5">{esc(label)}</text>',
+            f'<text x="{x + 13}" y="{y + 29}" fill="{color}" font-family="{FONT_FAMILY}" font-size="{value_size}" font-weight="700">{esc(value_text)}</text>',
+            f'<text x="{x + 13}" y="{y + 51}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="8.5" letter-spacing="0.5">{esc(label)}</text>',
         ]
     )
 
@@ -392,7 +393,7 @@ def panel(lines: list[str], x: int, y: int, width: int, height: int, title: str)
     lines.extend(
         [
             f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="10" fill="{BG}" fill-opacity="0.52" stroke="{GOLD}" stroke-opacity="0.24"/>',
-            f'<text x="{x + 14}" y="{y + 22}" fill="{GOLD_LIGHT}" font-family="monospace" font-size="10" font-weight="700" letter-spacing="0.7">{esc(title)}</text>',
+            f'<text x="{x + 14}" y="{y + 22}" fill="{GOLD_LIGHT}" font-family="{FONT_FAMILY}" font-size="10" font-weight="700" letter-spacing="0.7">{esc(title)}</text>',
             f'<line x1="{x + 12}" y1="{y + 34}" x2="{x + width - 12}" y2="{y + 34}" stroke="{GOLD}" stroke-opacity="0.18"/>',
         ]
     )
@@ -406,10 +407,10 @@ def bar_row(lines: list[str], x: int, y: int, width: int, label: str, percent: f
     fill_width = max(2, int(track_width * max(0.0, min(100.0, percent)) / 100.0))
     lines.extend(
         [
-            f'<text x="{x + 14}" y="{y + 11}" fill="{PARCHMENT}" font-family="monospace" font-size="9.5">{esc(compact(label, 18))}</text>',
+            f'<text x="{x + 14}" y="{y + 11}" fill="{PARCHMENT}" font-family="{FONT_FAMILY}" font-size="9.5">{esc(compact(label, 18))}</text>',
             f'<rect x="{track_x}" y="{y + 3}" width="{track_width}" height="9" rx="4.5" fill="{SURFACE}"/>',
             f'<rect x="{track_x}" y="{y + 3}" width="{fill_width}" height="9" rx="4.5" fill="{color}"/>',
-            f'<text x="{info_x}" y="{y + 11}" fill="{MUTED}" font-family="monospace" font-size="8">{esc(detail)}</text>',
+            f'<text x="{info_x}" y="{y + 11}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="8">{esc(detail)}</text>',
         ]
     )
 
@@ -449,7 +450,7 @@ def ecosystem_svg(data: dict) -> str:
                 122,
             )
     else:
-        lines.append(f'<text x="{left_x + 14}" y="{panel_y + 65}" fill="{MUTED}" font-family="monospace" font-size="9">Nenhuma linguagem retornada</text>')
+        lines.append(f'<text x="{left_x + 14}" y="{panel_y + 65}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="9">Nenhuma linguagem retornada</text>')
 
     file_types = list(data["file_types"].items())[:10]
     file_total = data["total_files"] or 1
@@ -468,10 +469,10 @@ def ecosystem_svg(data: dict) -> str:
                 78,
             )
     else:
-        lines.append(f'<text x="{right_x + 14}" y="{panel_y + 65}" fill="{MUTED}" font-family="monospace" font-size="9">Nenhum arquivo retornado</text>')
+        lines.append(f'<text x="{right_x + 14}" y="{panel_y + 65}" fill="{MUTED}" font-family="{FONT_FAMILY}" font-size="9">Nenhum arquivo retornado</text>')
 
     footer = f"Última atualização: {data['generated'].replace(' ', ' às ')}"
-    lines.append(f'<text x="24" y="420" fill="{DIM}" font-family="monospace" font-size="8.5">{esc(footer)}</text>')
+    lines.append(f'<text x="24" y="420" fill="{DIM}" font-family="{FONT_FAMILY}" font-size="8.5">{esc(footer)}</text>')
     lines.append("</svg>")
     return "\n".join(lines) + "\n"
 
