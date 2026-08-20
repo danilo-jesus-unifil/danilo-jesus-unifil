@@ -12,12 +12,24 @@ import html
 import json
 import os
 import re
+import sys
 import urllib.error
 import urllib.parse
 import urllib.request
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from linguist_catalog import (
+    FILE_TYPE_COLORS,
+    KNOWN_EXTENSIONS,
+    LANGUAGE_COLORS,
+    SPECIAL_FILE_TYPES,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = ROOT / "assets"
@@ -294,6 +306,9 @@ def file_type_for(path: str) -> str:
     lowered = basename.casefold()
     if lowered in SPECIAL_FILE_TYPES:
         return SPECIAL_FILE_TYPES[lowered]
+    for extension in KNOWN_EXTENSIONS:
+        if lowered.endswith(extension):
+            return extension
     suffix = Path(basename).suffix.casefold()
     if suffix:
         return suffix

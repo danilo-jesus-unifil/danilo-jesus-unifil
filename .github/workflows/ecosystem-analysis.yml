@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - ".github/scripts/ecosystem_analysis.py"
+      - ".github/scripts/linguist_catalog.py"
       - ".github/workflows/ecosystem-analysis.yml"
 
 concurrency:
