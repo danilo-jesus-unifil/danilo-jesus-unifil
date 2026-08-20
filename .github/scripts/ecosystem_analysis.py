@@ -311,7 +311,6 @@ def frame(width: int, height: int) -> list[str]:
         '<rect width="100%" height="100%" rx="14" fill="url(#eco-bg)"/>',
         f'<rect x="5" y="5" width="{width - 10}" height="{height - 10}" rx="11" fill="none" stroke="{GOLD}" stroke-opacity="0.35"/>',
         f'<text x="28" y="34" fill="{GOLD_LIGHT}" font-family="monospace" font-size="13" font-weight="700" letter-spacing="1.5">◆ {esc("Atividade do Github")}</text>',
-        f'<text x="28" y="53" fill="{DIM}" font-family="monospace" font-size="10" letter-spacing="0.8">{esc("linguagens · arquivos · famílias · leitura rápida do portfólio")}</text>',
         f'<line x1="24" y1="66" x2="856" y2="66" stroke="{GOLD}" stroke-opacity="0.25"/>',
         '<rect x="24" y="67" width="205" height="2" fill="url(#eco-scan)" opacity="0.85"/>',
         f'<rect x="774" y="18" width="82" height="24" rx="8" fill="{SURFACE}" stroke="{GREEN}" stroke-opacity="0.7"/>',
@@ -407,8 +406,6 @@ def ecosystem_svg(data: dict) -> str:
         lines.append(metric_card(24 + index * 168, 82, metric_width, label, value, color))
 
     left_x, right_x, panel_y, panel_w, panel_h = 24, 452, 165, 404, 266
-    panel(lines, left_x, panel_y, panel_w, panel_h, "LINGUAGENS DOMINANTES", "bytes oficiais · top 8 · percentual do código")
-    panel(lines, right_x, panel_y, panel_w, panel_h, "TIPOS DE ARQUIVO", "contagem de blobs · top 10 · percentual dos arquivos")
 
     languages = list(data["languages"].items())[:8]
     language_total = data["code_bytes"] or 1
@@ -450,7 +447,7 @@ def ecosystem_svg(data: dict) -> str:
 
     notice, notice_color = notice_text(data)
     lines.append(f'<text x="24" y="445" fill="{notice_color}" font-family="monospace" font-size="8.5">{esc(notice)}</text>')
-    lines.append(f'<text x="24" y="458" fill="{GOLD_LIGHT}" font-family="monospace" font-size="9" font-weight="700" letter-spacing="0.7">FAMÍLIAS DE ARQUIVO // RESUMO</text>')
+    lines.append(f'<text x="24" y="458" fill="{GOLD_LIGHT}" font-family="monospace" font-size="9" font-weight="700" letter-spacing="0.7">Tipos de arquivo</text>')
 
     family_width = 196
     for index, family in enumerate(FAMILY_ORDER):
