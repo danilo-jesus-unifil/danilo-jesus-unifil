@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 570" width="880" height="570" role="img" aria-label="Análise do ecossistema GitHub de danilo-jesus-unifil">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 570" width="880" height="570" role="img" aria-label="GitHub de danilo-jesus-unifil">
 <defs><linearGradient id="eco-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e0c16"/><stop offset="1" stop-color="#0b0910"/></linearGradient><linearGradient id="eco-scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d4a24e" stop-opacity="0"/><stop offset="0.5" stop-color="#e8c07a" stop-opacity="0.9"/><stop offset="1" stop-color="#d4a24e" stop-opacity="0"/></linearGradient></defs>
 <rect width="100%" height="100%" rx="14" fill="url(#eco-bg)"/>
 <rect x="5" y="5" width="870" height="560" rx="11" fill="none" stroke="#d4a24e" stroke-opacity="0.35"/>
-<text x="28" y="34" fill="#e8c07a" font-family="monospace" font-size="13" font-weight="700" letter-spacing="1.5">◆ ARSENAL // ANÁLISE DO ECOSSISTEMA</text>
+<text x="28" y="34" fill="#e8c07a" font-family="monospace" font-size="13" font-weight="700" letter-spacing="1.5">◆ Atividade do Github</text>
 <text x="28" y="53" fill="#77694f" font-family="monospace" font-size="10" letter-spacing="0.8">linguagens · arquivos · famílias · leitura rápida do portfólio</text>
 <line x1="24" y1="66" x2="856" y2="66" stroke="#d4a24e" stroke-opacity="0.25"/>
 <rect x="24" y="67" width="205" height="2" fill="url(#eco-scan)" opacity="0.85"/>
@@ -112,5 +112,5 @@
 <rect x="648" y="504" width="196" height="34" rx="7" fill="#1d1729" stroke="#9b8fc4" stroke-opacity="0.32"/>
 <text x="659" y="518" fill="#9b8fc4" font-family="monospace" font-size="8.5" font-weight="700">MODELO 3D</text>
 <text x="659" y="531" fill="#a89a80" font-family="monospace" font-size="8">0 arq. · 0 B</text>
-<text x="24" y="555" fill="#77694f" font-family="monospace" font-size="8.5">atualizado automaticamente · 2026-08-20 20:09 UTC · 6 públicos encontrados · 0 aviso(s) de cobertura</text>
+<text x="24" y="555" fill="#77694f" font-family="monospace" font-size="8.5">atualizado automaticamente · 2026-08-20 20:13 UTC · 6 públicos encontrados · 0 aviso(s) de cobertura</text>
 </svg>
