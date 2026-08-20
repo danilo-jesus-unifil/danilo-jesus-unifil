@@ -8,4 +8,4 @@ Sou Danilo Jesus e estudo desenvolvimento de software. Aqui ficam meus projetos,
   <img src="./assets/github-ecosystem.svg" alt="Análise do ecossistema público do GitHub" />
 </p>
 
-Os cartões usam dados públicos deste perfil e ignoram forks.
+Dados públicos do perfil; forks não entram na análise.
