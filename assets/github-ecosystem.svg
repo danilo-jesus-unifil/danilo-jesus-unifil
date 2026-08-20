@@ -7,7 +7,7 @@
 <rect x="24" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="37" y="97" fill="#3ddc84" font-family="monospace" font-size="20" font-weight="700">5</text><text x="37" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Linguagens</text>
 <rect x="192" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="205" y="97" fill="#e8c07a" font-family="monospace" font-size="20" font-weight="700">17</text><text x="205" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Tipos de arquivo</text>
 <rect x="360" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="373" y="97" fill="#a68dad" font-family="monospace" font-size="20" font-weight="700">6</text><text x="373" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Repositórios analisados</text>
-<rect x="528" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="541" y="97" fill="#d4a24e" font-family="monospace" font-size="20" font-weight="700">687.6 KB</text><text x="541" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Códigos no total</text>
+<rect x="528" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="541" y="97" fill="#d4a24e" font-family="monospace" font-size="20" font-weight="700">691.1 KB</text><text x="541" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Códigos no total</text>
 <rect x="696" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="709" y="97" fill="#e07a5f" font-family="monospace" font-size="20" font-weight="700">288</text><text x="709" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Total de arquivos</text>
 <rect x="24" y="147" width="404" height="250" rx="10" fill="#0e0c16" fill-opacity="0.52" stroke="#d4a24e" stroke-opacity="0.24"/>
 <text x="38" y="169" fill="#e8c07a" font-family="monospace" font-size="10" font-weight="700" letter-spacing="0.7">Linguagens mais usadas</text>
@@ -18,7 +18,7 @@
 <text x="38" y="204" fill="#f4ecdd" font-family="monospace" font-size="9.5">Rust</text>
 <rect x="146" y="196" width="158" height="9" rx="4.5" fill="#1d1729"/>
 <rect x="146" y="196" width="132" height="9" rx="4.5" fill="#dea584"/>
-<text x="316" y="204" fill="#a89a80" font-family="monospace" font-size="8">83.9% · 576.5 KB</text>
+<text x="316" y="204" fill="#a89a80" font-family="monospace" font-size="8">83.9% · 580.1 KB</text>
 <text x="38" y="227" fill="#f4ecdd" font-family="monospace" font-size="9.5">Slint</text>
 <rect x="146" y="219" width="158" height="9" rx="4.5" fill="#1d1729"/>
 <rect x="146" y="219" width="14" height="9" rx="4.5" fill="#2379F4"/>
@@ -75,5 +75,5 @@
 <rect x="530" y="367" width="202" height="9" rx="4.5" fill="#1d1729"/>
 <rect x="530" y="367" width="2" height="9" rx="4.5" fill="#a68dad"/>
 <text x="744" y="375" fill="#a89a80" font-family="monospace" font-size="8">1.0% · 3 arq.</text>
-<text x="24" y="420" fill="#77694f" font-family="monospace" font-size="8.5">Última atualização: 20/08/2026 às 21:54</text>
+<text x="24" y="420" fill="#77694f" font-family="monospace" font-size="8.5">Última atualização: 20/08/2026 às 21:56</text>
 </svg>
