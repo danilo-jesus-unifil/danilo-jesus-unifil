@@ -15,7 +15,7 @@ import re
 import urllib.error
 import urllib.parse
 import urllib.request
-from collections import Counter, defaultdict
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -38,7 +38,7 @@ PURPLE = "#a68dad"
 RED = "#e07a5f"
 BLUE = "#8fa6c4"
 
-TIMESTAMP_RE = re.compile(r"\d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC")
+TIMESTAMP_RE = re.compile(r"\d{2}/\d{2}/\d{4} \d{2}:\d{2}")
 
 LANGUAGE_COLORS = {
     "JavaScript": GOLD_LIGHT,
@@ -65,34 +65,6 @@ SPECIAL_FILE_TYPES = {
     "license": "LICENSE",
     ".gitignore": ".gitignore",
 }
-
-FAMILY_ORDER = [
-    "código",
-    "imagem",
-    "dado",
-    "documento",
-    "estilo",
-    "marcação",
-    "áudio e vídeo",
-    "modelo 3D",
-]
-FAMILY_COLORS = [GOLD_LIGHT, RED, BLUE, PURPLE, GOLD, GREEN, "#c48f6b", "#9b8fc4"]
-FAMILY_EXTENSIONS = {
-    "código": {
-        ".py", ".js", ".jsx", ".ts", ".tsx", ".java", ".c", ".h", ".cpp",
-        ".cc", ".cxx", ".hpp", ".cs", ".go", ".rs", ".rb", ".php", ".swift",
-        ".kt", ".kts", ".dart", ".lua", ".r", ".scala", ".ex", ".exs",
-        ".sh", ".bash", ".zsh", ".fish", ".pl", ".sql",
-    },
-    "imagem": {".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".ico", ".tif", ".tiff", ".avif"},
-    "dado": {".json", ".yaml", ".yml", ".toml", ".csv", ".tsv", ".xml", ".ndjson", ".parquet", ".db", ".sqlite"},
-    "documento": {".md", ".markdown", ".txt", ".rst", ".pdf", ".doc", ".docx", ".odt", ".rtf", ".tex"},
-    "estilo": {".css", ".scss", ".sass", ".less", ".styl", ".pcss"},
-    "marcação": {".html", ".htm", ".xhtml", ".svg", ".vue", ".svelte", ".astro", ".xml"},
-    "áudio e vídeo": {".mp3", ".wav", ".ogg", ".flac", ".m4a", ".aac", ".mp4", ".webm", ".mov", ".avi", ".mkv"},
-    "modelo 3D": {".obj", ".fbx", ".gltf", ".glb", ".stl", ".blend", ".dae", ".ply", ".3ds"},
-}
-
 
 def esc(value: object) -> str:
     """Escapa qualquer valor antes de inseri-lo no SVG."""
@@ -221,17 +193,10 @@ def file_type_for(path: str) -> str:
     return "[sem extensão]"
 
 
-def family_for(path: str, file_type: str) -> str | None:
-    basename = path.rsplit("/", 1)[-1]
-    if file_type in {"Dockerfile", "Makefile"}:
-        return "código"
+def pretty_file_type(file_type: str) -> str:
     if file_type == "LICENSE":
-        return "documento"
-    suffix = Path(basename).suffix.casefold()
-    for family in FAMILY_ORDER:
-        if suffix in FAMILY_EXTENSIONS[family]:
-            return family
-    return None
+        return "License"
+    return file_type
 
 
 def human_bytes(value: int) -> str:
@@ -248,8 +213,6 @@ def collect_ecosystem() -> dict:
     repositories = list_public_repositories()
     languages: Counter[str] = Counter()
     file_types: Counter[str] = Counter()
-    family_files: Counter[str] = Counter()
-    family_bytes: Counter[str] = Counter()
     warnings: list[str] = []
     truncated: list[str] = []
     failed: list[str] = []
@@ -280,21 +243,13 @@ def collect_ecosystem() -> dict:
             total_files += 1
             file_type = file_type_for(path)
             file_types[file_type] += 1
-            family = family_for(path, file_type)
-            if family:
-                family_files[family] += 1
-                family_bytes[family] += max(0, size)
 
-    generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    generated = datetime.now(timezone.utc).strftime("%d/%m/%Y %H:%M")
     return {
         "public_repositories": len(repositories),
         "analyzed_repositories": len(repositories) - len(failed),
         "languages": dict(languages.most_common()),
         "file_types": dict(file_types.most_common()),
-        "families": {
-            family: {"files": family_files[family], "bytes": family_bytes[family]}
-            for family in FAMILY_ORDER
-        },
         "total_files": total_files,
         "code_bytes": sum(languages.values()),
         "truncated": truncated,
@@ -311,11 +266,8 @@ def frame(width: int, height: int) -> list[str]:
         '<rect width="100%" height="100%" rx="14" fill="url(#eco-bg)"/>',
         f'<rect x="5" y="5" width="{width - 10}" height="{height - 10}" rx="11" fill="none" stroke="{GOLD}" stroke-opacity="0.35"/>',
         f'<text x="28" y="34" fill="{GOLD_LIGHT}" font-family="monospace" font-size="13" font-weight="700" letter-spacing="1.5">◆ {esc("Atividade do Github")}</text>',
-        f'<line x1="24" y1="66" x2="856" y2="66" stroke="{GOLD}" stroke-opacity="0.25"/>',
-        '<rect x="24" y="67" width="205" height="2" fill="url(#eco-scan)" opacity="0.85"/>',
-        f'<rect x="774" y="18" width="82" height="24" rx="8" fill="{SURFACE}" stroke="{GREEN}" stroke-opacity="0.7"/>',
-        f'<circle cx="789" cy="30" r="4" fill="{GREEN}"/>',
-        f'<text x="800" y="34" fill="{GREEN}" font-family="monospace" font-size="10" font-weight="700" letter-spacing="1">LIVE</text>',
+        f'<line x1="24" y1="52" x2="856" y2="52" stroke="{GOLD}" stroke-opacity="0.25"/>',
+        '<rect x="24" y="53" width="205" height="2" fill="url(#eco-scan)" opacity="0.85"/>',
     ]
 
 
@@ -331,13 +283,12 @@ def metric_card(x: int, y: int, width: int, label: str, value: object, color: st
     )
 
 
-def panel(lines: list[str], x: int, y: int, width: int, height: int, title: str, subtitle: str) -> None:
+def panel(lines: list[str], x: int, y: int, width: int, height: int, title: str) -> None:
     lines.extend(
         [
             f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="10" fill="{BG}" fill-opacity="0.52" stroke="{GOLD}" stroke-opacity="0.24"/>',
             f'<text x="{x + 14}" y="{y + 22}" fill="{GOLD_LIGHT}" font-family="monospace" font-size="10" font-weight="700" letter-spacing="0.7">{esc(title)}</text>',
-            f'<text x="{x + 14}" y="{y + 38}" fill="{DIM}" font-family="monospace" font-size="8">{esc(subtitle)}</text>',
-            f'<line x1="{x + 12}" y1="{y + 47}" x2="{x + width - 12}" y2="{y + 47}" stroke="{GOLD}" stroke-opacity="0.18"/>',
+            f'<line x1="{x + 12}" y1="{y + 34}" x2="{x + width - 12}" y2="{y + 34}" stroke="{GOLD}" stroke-opacity="0.18"/>',
         ]
     )
 
@@ -358,54 +309,23 @@ def bar_row(lines: list[str], x: int, y: int, width: int, label: str, percent: f
     )
 
 
-def notice_text(data: dict) -> tuple[str, str]:
-    warnings: list[str] = []
-    if data["truncated"]:
-        names = ", ".join(data["truncated"][:4])
-        suffix = "…" if len(data["truncated"]) > 4 else ""
-        warnings.append(f"árvores truncadas: {names}{suffix}")
-    if data["failed"]:
-        names = ", ".join(data["failed"][:4])
-        suffix = "…" if len(data["failed"]) > 4 else ""
-        warnings.append(f"não analisados: {names}{suffix}")
-    language_warnings = [item for item in data["warnings"] if item.startswith("linguagens")]
-    if language_warnings:
-        warnings.append(f"avisos de linguagem: {len(language_warnings)}")
-    if warnings:
-        return "ATENÇÃO · " + compact(" · ".join(warnings), 155), RED
-    return (
-        f"COBERTURA · {data['public_repositories']} repositórios públicos · {data['analyzed_repositories']} árvores analisadas · somente blobs",
-        GREEN,
-    )
-
-
-def family_card(lines: list[str], x: int, y: int, width: int, family: str, values: dict, color: str) -> None:
-    files = int(values.get("files", 0))
-    bytes_value = int(values.get("bytes", 0))
-    lines.extend(
-        [
-            f'<rect x="{x}" y="{y}" width="{width}" height="34" rx="7" fill="{SURFACE}" stroke="{color}" stroke-opacity="0.32"/>',
-            f'<text x="{x + 11}" y="{y + 14}" fill="{color}" font-family="monospace" font-size="8.5" font-weight="700">{esc(family.upper())}</text>',
-            f'<text x="{x + 11}" y="{y + 27}" fill="{MUTED}" font-family="monospace" font-size="8">{esc(str(files) + " arq. · " + human_bytes(bytes_value))}</text>',
-        ]
-    )
-
-
 def ecosystem_svg(data: dict) -> str:
-    width, height = 880, 570
+    width, height = 880, 435
     lines = frame(width, height)
     metric_values = [
-        ("LINGUAGENS", len(data["languages"]), GREEN),
-        ("TIPOS DE ARQUIVO", len(data["file_types"]), GOLD_LIGHT),
-        ("REPOS ANALISADOS", data["analyzed_repositories"], PURPLE),
-        ("TOTAL CÓDIGO", human_bytes(data["code_bytes"]), GOLD),
-        ("TOTAL DE ARQUIVOS", data["total_files"], RED),
+        ("Linguagens", len(data["languages"]), GREEN),
+        ("Tipos de arquivo", len(data["file_types"]), GOLD_LIGHT),
+        ("Repositórios analisados", data["analyzed_repositories"], PURPLE),
+        ("Códigos no total", human_bytes(data["code_bytes"]), GOLD),
+        ("Total de arquivos", data["total_files"], RED),
     ]
     metric_width = 160
     for index, (label, value, color) in enumerate(metric_values):
-        lines.append(metric_card(24 + index * 168, 82, metric_width, label, value, color))
+        lines.append(metric_card(24 + index * 168, 68, metric_width, label, value, color))
 
-    left_x, right_x, panel_y, panel_w, panel_h = 24, 452, 165, 404, 266
+    left_x, right_x, panel_y, panel_w, panel_h = 24, 452, 147, 404, 250
+    panel(lines, left_x, panel_y, panel_w, panel_h, "Linguagens mais usadas")
+    panel(lines, right_x, panel_y, panel_w, panel_h, "Tipos de arquivo")
 
     languages = list(data["languages"].items())[:8]
     language_total = data["code_bytes"] or 1
@@ -415,7 +335,7 @@ def ecosystem_svg(data: dict) -> str:
             bar_row(
                 lines,
                 left_x,
-                panel_y + 58 + index * 23,
+                panel_y + 46 + index * 23,
                 panel_w,
                 language,
                 percent,
@@ -424,7 +344,7 @@ def ecosystem_svg(data: dict) -> str:
                 122,
             )
     else:
-        lines.append(f'<text x="{left_x + 14}" y="{panel_y + 76}" fill="{MUTED}" font-family="monospace" font-size="9">nenhuma linguagem retornada</text>')
+        lines.append(f'<text x="{left_x + 14}" y="{panel_y + 65}" fill="{MUTED}" font-family="monospace" font-size="9">Nenhuma linguagem retornada</text>')
 
     file_types = list(data["file_types"].items())[:10]
     file_total = data["total_files"] or 1
@@ -434,39 +354,19 @@ def ecosystem_svg(data: dict) -> str:
             bar_row(
                 lines,
                 right_x,
-                panel_y + 58 + index * 19,
+                panel_y + 46 + index * 19,
                 panel_w,
-                file_type,
+                pretty_file_type(file_type),
                 percent,
                 f"{percent:.1f}% · {count} arq.",
                 [GOLD_LIGHT, GOLD, GREEN, PURPLE, RED, BLUE][index % 6],
                 78,
             )
     else:
-        lines.append(f'<text x="{right_x + 14}" y="{panel_y + 76}" fill="{MUTED}" font-family="monospace" font-size="9">nenhum arquivo retornado</text>')
+        lines.append(f'<text x="{right_x + 14}" y="{panel_y + 65}" fill="{MUTED}" font-family="monospace" font-size="9">Nenhum arquivo retornado</text>')
 
-    notice, notice_color = notice_text(data)
-    lines.append(f'<text x="24" y="445" fill="{notice_color}" font-family="monospace" font-size="8.5">{esc(notice)}</text>')
-    lines.append(f'<text x="24" y="458" fill="{GOLD_LIGHT}" font-family="monospace" font-size="9" font-weight="700" letter-spacing="0.7">Tipos de arquivo</text>')
-
-    family_width = 196
-    for index, family in enumerate(FAMILY_ORDER):
-        row, column = divmod(index, 4)
-        family_card(
-            lines,
-            24 + column * 208,
-            464 + row * 40,
-            family_width,
-            family,
-            data["families"][family],
-            FAMILY_COLORS[index],
-        )
-
-    footer = (
-        f"atualizado automaticamente · {data['generated']} · {data['public_repositories']} públicos encontrados · "
-        f"{len(data['warnings'])} aviso(s) de cobertura"
-    )
-    lines.append(f'<text x="24" y="555" fill="{DIM}" font-family="monospace" font-size="8.5">{esc(compact(footer, 145))}</text>')
+    footer = f"Última atualização: {data['generated'].replace(' ', ' às ')}"
+    lines.append(f'<text x="24" y="420" fill="{DIM}" font-family="monospace" font-size="8.5">{esc(footer)}</text>')
     lines.append("</svg>")
     return "\n".join(lines) + "\n"
 

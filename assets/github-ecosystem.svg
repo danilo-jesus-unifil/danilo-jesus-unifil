@@ -1,103 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 570" width="880" height="570" role="img" aria-label="GitHub de danilo-jesus-unifil">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 435" width="880" height="435" role="img" aria-label="GitHub de danilo-jesus-unifil">
 <defs><linearGradient id="eco-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e0c16"/><stop offset="1" stop-color="#0b0910"/></linearGradient><linearGradient id="eco-scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d4a24e" stop-opacity="0"/><stop offset="0.5" stop-color="#e8c07a" stop-opacity="0.9"/><stop offset="1" stop-color="#d4a24e" stop-opacity="0"/></linearGradient></defs>
 <rect width="100%" height="100%" rx="14" fill="url(#eco-bg)"/>
-<rect x="5" y="5" width="870" height="560" rx="11" fill="none" stroke="#d4a24e" stroke-opacity="0.35"/>
+<rect x="5" y="5" width="870" height="425" rx="11" fill="none" stroke="#d4a24e" stroke-opacity="0.35"/>
 <text x="28" y="34" fill="#e8c07a" font-family="monospace" font-size="13" font-weight="700" letter-spacing="1.5">◆ Atividade do Github</text>
-<line x1="24" y1="66" x2="856" y2="66" stroke="#d4a24e" stroke-opacity="0.25"/>
-<rect x="24" y="67" width="205" height="2" fill="url(#eco-scan)" opacity="0.85"/>
-<rect x="774" y="18" width="82" height="24" rx="8" fill="#1d1729" stroke="#3ddc84" stroke-opacity="0.7"/>
-<circle cx="789" cy="30" r="4" fill="#3ddc84"/>
-<text x="800" y="34" fill="#3ddc84" font-family="monospace" font-size="10" font-weight="700" letter-spacing="1">LIVE</text>
-<rect x="24" y="82" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="37" y="111" fill="#3ddc84" font-family="monospace" font-size="20" font-weight="700">5</text><text x="37" y="133" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">LINGUAGENS</text>
-<rect x="192" y="82" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="205" y="111" fill="#e8c07a" font-family="monospace" font-size="20" font-weight="700">17</text><text x="205" y="133" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">TIPOS DE ARQUIVO</text>
-<rect x="360" y="82" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="373" y="111" fill="#a68dad" font-family="monospace" font-size="20" font-weight="700">6</text><text x="373" y="133" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">REPOS ANALISADOS</text>
-<rect x="528" y="82" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="541" y="111" fill="#d4a24e" font-family="monospace" font-size="20" font-weight="700">667.0 KB</text><text x="541" y="133" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">TOTAL CÓDIGO</text>
-<rect x="696" y="82" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="709" y="111" fill="#e07a5f" font-family="monospace" font-size="20" font-weight="700">273</text><text x="709" y="133" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">TOTAL DE ARQUIVOS</text>
-<text x="38" y="234" fill="#f4ecdd" font-family="monospace" font-size="9.5">Rust</text>
-<rect x="146" y="226" width="158" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="146" y="226" width="132" height="9" rx="4.5" fill="#c4926b"/>
-<text x="316" y="234" fill="#a89a80" font-family="monospace" font-size="8">83.8% · 558.9 KB</text>
-<text x="38" y="257" fill="#f4ecdd" font-family="monospace" font-size="9.5">Slint</text>
-<rect x="146" y="249" width="158" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="146" y="249" width="14" height="9" rx="4.5" fill="#d4a24e"/>
-<text x="316" y="257" fill="#a89a80" font-family="monospace" font-size="8">9.3% · 62.1 KB</text>
-<text x="38" y="280" fill="#f4ecdd" font-family="monospace" font-size="9.5">Shell</text>
-<rect x="146" y="272" width="158" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="146" y="272" width="9" height="9" rx="4.5" fill="#8fc49a"/>
-<text x="316" y="280" fill="#a89a80" font-family="monospace" font-size="8">5.9% · 39.5 KB</text>
-<text x="38" y="303" fill="#f4ecdd" font-family="monospace" font-size="9.5">Python</text>
-<rect x="146" y="295" width="158" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="146" y="295" width="2" height="9" rx="4.5" fill="#c9a227"/>
-<text x="316" y="303" fill="#a89a80" font-family="monospace" font-size="8">0.8% · 5.2 KB</text>
-<text x="38" y="326" fill="#f4ecdd" font-family="monospace" font-size="9.5">PowerShell</text>
-<rect x="146" y="318" width="158" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="146" y="318" width="2" height="9" rx="4.5" fill="#a89a80"/>
-<text x="316" y="326" fill="#a89a80" font-family="monospace" font-size="8">0.2% · 1.3 KB</text>
-<text x="466" y="234" fill="#f4ecdd" font-family="monospace" font-size="9.5">.md</text>
-<rect x="530" y="226" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="226" width="76" height="9" rx="4.5" fill="#e8c07a"/>
-<text x="744" y="234" fill="#a89a80" font-family="monospace" font-size="8">38.1% · 104 arq.</text>
-<text x="466" y="253" fill="#f4ecdd" font-family="monospace" font-size="9.5">.rs</text>
-<rect x="530" y="245" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="245" width="76" height="9" rx="4.5" fill="#d4a24e"/>
-<text x="744" y="253" fill="#a89a80" font-family="monospace" font-size="8">37.7% · 103 arq.</text>
-<text x="466" y="272" fill="#f4ecdd" font-family="monospace" font-size="9.5">.sh</text>
-<rect x="530" y="264" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="264" width="17" height="9" rx="4.5" fill="#3ddc84"/>
-<text x="744" y="272" fill="#a89a80" font-family="monospace" font-size="8">8.4% · 23 arq.</text>
-<text x="466" y="291" fill="#f4ecdd" font-family="monospace" font-size="9.5">.toml</text>
-<rect x="530" y="283" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="283" width="6" height="9" rx="4.5" fill="#a68dad"/>
-<text x="744" y="291" fill="#a89a80" font-family="monospace" font-size="8">3.3% · 9 arq.</text>
-<text x="466" y="310" fill="#f4ecdd" font-family="monospace" font-size="9.5">.slint</text>
-<rect x="530" y="302" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="302" width="5" height="9" rx="4.5" fill="#e07a5f"/>
-<text x="744" y="310" fill="#a89a80" font-family="monospace" font-size="8">2.6% · 7 arq.</text>
-<text x="466" y="329" fill="#f4ecdd" font-family="monospace" font-size="9.5">LICENSE</text>
-<rect x="530" y="321" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="321" width="2" height="9" rx="4.5" fill="#8fa6c4"/>
-<text x="744" y="329" fill="#a89a80" font-family="monospace" font-size="8">1.5% · 4 arq.</text>
-<text x="466" y="348" fill="#f4ecdd" font-family="monospace" font-size="9.5">.py</text>
-<rect x="530" y="340" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="340" width="2" height="9" rx="4.5" fill="#e8c07a"/>
-<text x="744" y="348" fill="#a89a80" font-family="monospace" font-size="8">1.5% · 4 arq.</text>
-<text x="466" y="367" fill="#f4ecdd" font-family="monospace" font-size="9.5">.gitignore</text>
-<rect x="530" y="359" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="359" width="2" height="9" rx="4.5" fill="#d4a24e"/>
-<text x="744" y="367" fill="#a89a80" font-family="monospace" font-size="8">1.1% · 3 arq.</text>
-<text x="466" y="386" fill="#f4ecdd" font-family="monospace" font-size="9.5">.lock</text>
-<rect x="530" y="378" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="378" width="2" height="9" rx="4.5" fill="#3ddc84"/>
-<text x="744" y="386" fill="#a89a80" font-family="monospace" font-size="8">1.1% · 3 arq.</text>
-<text x="466" y="405" fill="#f4ecdd" font-family="monospace" font-size="9.5">.yml</text>
-<rect x="530" y="397" width="202" height="9" rx="4.5" fill="#1d1729"/>
-<rect x="530" y="397" width="2" height="9" rx="4.5" fill="#a68dad"/>
-<text x="744" y="405" fill="#a89a80" font-family="monospace" font-size="8">1.1% · 3 arq.</text>
-<text x="24" y="445" fill="#3ddc84" font-family="monospace" font-size="8.5">COBERTURA · 6 repositórios públicos · 6 árvores analisadas · somente blobs</text>
-<text x="24" y="458" fill="#e8c07a" font-family="monospace" font-size="9" font-weight="700" letter-spacing="0.7">Tipos de arquivo</text>
-<rect x="24" y="464" width="196" height="34" rx="7" fill="#1d1729" stroke="#e8c07a" stroke-opacity="0.32"/>
-<text x="35" y="478" fill="#e8c07a" font-family="monospace" font-size="8.5" font-weight="700">CÓDIGO</text>
-<text x="35" y="491" fill="#a89a80" font-family="monospace" font-size="8">130 arq. · 623.2 KB</text>
-<rect x="232" y="464" width="196" height="34" rx="7" fill="#1d1729" stroke="#e07a5f" stroke-opacity="0.32"/>
-<text x="243" y="478" fill="#e07a5f" font-family="monospace" font-size="8.5" font-weight="700">IMAGEM</text>
-<text x="243" y="491" fill="#a89a80" font-family="monospace" font-size="8">3 arq. · 364.5 KB</text>
-<rect x="440" y="464" width="196" height="34" rx="7" fill="#1d1729" stroke="#8fa6c4" stroke-opacity="0.32"/>
-<text x="451" y="478" fill="#8fa6c4" font-family="monospace" font-size="8.5" font-weight="700">DADO</text>
-<text x="451" y="491" fill="#a89a80" font-family="monospace" font-size="8">12 arq. · 10.8 KB</text>
-<rect x="648" y="464" width="196" height="34" rx="7" fill="#1d1729" stroke="#a68dad" stroke-opacity="0.32"/>
-<text x="659" y="478" fill="#a68dad" font-family="monospace" font-size="8.5" font-weight="700">DOCUMENTO</text>
-<text x="659" y="491" fill="#a89a80" font-family="monospace" font-size="8">110 arq. · 580.8 KB</text>
-<rect x="24" y="504" width="196" height="34" rx="7" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.32"/>
-<text x="35" y="518" fill="#d4a24e" font-family="monospace" font-size="8.5" font-weight="700">ESTILO</text>
-<text x="35" y="531" fill="#a89a80" font-family="monospace" font-size="8">0 arq. · 0 B</text>
-<rect x="232" y="504" width="196" height="34" rx="7" fill="#1d1729" stroke="#3ddc84" stroke-opacity="0.32"/>
-<text x="243" y="518" fill="#3ddc84" font-family="monospace" font-size="8.5" font-weight="700">MARCAÇÃO</text>
-<text x="243" y="531" fill="#a89a80" font-family="monospace" font-size="8">1 arq. · 12.1 KB</text>
-<rect x="440" y="504" width="196" height="34" rx="7" fill="#1d1729" stroke="#c48f6b" stroke-opacity="0.32"/>
-<text x="451" y="518" fill="#c48f6b" font-family="monospace" font-size="8.5" font-weight="700">ÁUDIO E VÍDEO</text>
-<text x="451" y="531" fill="#a89a80" font-family="monospace" font-size="8">0 arq. · 0 B</text>
-<rect x="648" y="504" width="196" height="34" rx="7" fill="#1d1729" stroke="#9b8fc4" stroke-opacity="0.32"/>
-<text x="659" y="518" fill="#9b8fc4" font-family="monospace" font-size="8.5" font-weight="700">MODELO 3D</text>
-<text x="659" y="531" fill="#a89a80" font-family="monospace" font-size="8">0 arq. · 0 B</text>
-<text x="24" y="555" fill="#77694f" font-family="monospace" font-size="8.5">atualizado automaticamente · 2026-08-20 20:35 UTC · 6 públicos encontrados · 0 aviso(s) de cobertura</text>
+<line x1="24" y1="52" x2="856" y2="52" stroke="#d4a24e" stroke-opacity="0.25"/>
+<rect x="24" y="53" width="205" height="2" fill="url(#eco-scan)" opacity="0.85"/>
+<rect x="24" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="37" y="97" fill="#3ddc84" font-family="monospace" font-size="20" font-weight="700">5</text><text x="37" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Linguagens</text>
+<rect x="192" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="205" y="97" fill="#e8c07a" font-family="monospace" font-size="20" font-weight="700">17</text><text x="205" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Tipos de arquivo</text>
+<rect x="360" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="373" y="97" fill="#a68dad" font-family="monospace" font-size="20" font-weight="700">6</text><text x="373" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Repositórios analisados</text>
+<rect x="528" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="541" y="97" fill="#d4a24e" font-family="monospace" font-size="20" font-weight="700">682.3 KB</text><text x="541" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Códigos no total</text>
+<rect x="696" y="68" width="160" height="66" rx="8" fill="#1d1729" stroke="#d4a24e" stroke-opacity="0.22"/><text x="709" y="97" fill="#e07a5f" font-family="monospace" font-size="20" font-weight="700">282</text><text x="709" y="119" fill="#a89a80" font-family="monospace" font-size="8.5" letter-spacing="0.5">Total de arquivos</text>
+<rect x="24" y="147" width="404" height="250" rx="10" fill="#0e0c16" fill-opacity="0.52" stroke="#d4a24e" stroke-opacity="0.24"/>
+<text x="38" y="169" fill="#e8c07a" font-family="monospace" font-size="10" font-weight="700" letter-spacing="0.7">Linguagens mais usadas</text>
+<line x1="36" y1="181" x2="416" y2="181" stroke="#d4a24e" stroke-opacity="0.18"/>
+<rect x="452" y="147" width="404" height="250" rx="10" fill="#0e0c16" fill-opacity="0.52" stroke="#d4a24e" stroke-opacity="0.24"/>
+<text x="466" y="169" fill="#e8c07a" font-family="monospace" font-size="10" font-weight="700" letter-spacing="0.7">Tipos de arquivo</text>
+<line x1="464" y1="181" x2="844" y2="181" stroke="#d4a24e" stroke-opacity="0.18"/>
+<text x="38" y="204" fill="#f4ecdd" font-family="monospace" font-size="9.5">Rust</text>
+<rect x="146" y="196" width="158" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="146" y="196" width="132" height="9" rx="4.5" fill="#c4926b"/>
+<text x="316" y="204" fill="#a89a80" font-family="monospace" font-size="8">83.9% · 572.4 KB</text>
+<text x="38" y="227" fill="#f4ecdd" font-family="monospace" font-size="9.5">Slint</text>
+<rect x="146" y="219" width="158" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="146" y="219" width="14" height="9" rx="4.5" fill="#d4a24e"/>
+<text x="316" y="227" fill="#a89a80" font-family="monospace" font-size="8">9.1% · 62.1 KB</text>
+<text x="38" y="250" fill="#f4ecdd" font-family="monospace" font-size="9.5">Shell</text>
+<rect x="146" y="242" width="158" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="146" y="242" width="9" height="9" rx="4.5" fill="#8fc49a"/>
+<text x="316" y="250" fill="#a89a80" font-family="monospace" font-size="8">5.9% · 40.3 KB</text>
+<text x="38" y="273" fill="#f4ecdd" font-family="monospace" font-size="9.5">Python</text>
+<rect x="146" y="265" width="158" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="146" y="265" width="2" height="9" rx="4.5" fill="#c9a227"/>
+<text x="316" y="273" fill="#a89a80" font-family="monospace" font-size="8">0.8% · 5.2 KB</text>
+<text x="38" y="296" fill="#f4ecdd" font-family="monospace" font-size="9.5">PowerShell</text>
+<rect x="146" y="288" width="158" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="146" y="288" width="2" height="9" rx="4.5" fill="#a89a80"/>
+<text x="316" y="296" fill="#a89a80" font-family="monospace" font-size="8">0.3% · 2.3 KB</text>
+<text x="466" y="204" fill="#f4ecdd" font-family="monospace" font-size="9.5">.md</text>
+<rect x="530" y="196" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="196" width="80" height="9" rx="4.5" fill="#e8c07a"/>
+<text x="744" y="204" fill="#a89a80" font-family="monospace" font-size="8">39.7% · 112 arq.</text>
+<text x="466" y="223" fill="#f4ecdd" font-family="monospace" font-size="9.5">.rs</text>
+<rect x="530" y="215" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="215" width="73" height="9" rx="4.5" fill="#d4a24e"/>
+<text x="744" y="223" fill="#a89a80" font-family="monospace" font-size="8">36.5% · 103 arq.</text>
+<text x="466" y="242" fill="#f4ecdd" font-family="monospace" font-size="9.5">.sh</text>
+<rect x="530" y="234" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="234" width="17" height="9" rx="4.5" fill="#3ddc84"/>
+<text x="744" y="242" fill="#a89a80" font-family="monospace" font-size="8">8.5% · 24 arq.</text>
+<text x="466" y="261" fill="#f4ecdd" font-family="monospace" font-size="9.5">.toml</text>
+<rect x="530" y="253" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="253" width="6" height="9" rx="4.5" fill="#a68dad"/>
+<text x="744" y="261" fill="#a89a80" font-family="monospace" font-size="8">3.2% · 9 arq.</text>
+<text x="466" y="280" fill="#f4ecdd" font-family="monospace" font-size="9.5">.slint</text>
+<rect x="530" y="272" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="272" width="5" height="9" rx="4.5" fill="#e07a5f"/>
+<text x="744" y="280" fill="#a89a80" font-family="monospace" font-size="8">2.5% · 7 arq.</text>
+<text x="466" y="299" fill="#f4ecdd" font-family="monospace" font-size="9.5">License</text>
+<rect x="530" y="291" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="291" width="2" height="9" rx="4.5" fill="#8fa6c4"/>
+<text x="744" y="299" fill="#a89a80" font-family="monospace" font-size="8">1.4% · 4 arq.</text>
+<text x="466" y="318" fill="#f4ecdd" font-family="monospace" font-size="9.5">.py</text>
+<rect x="530" y="310" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="310" width="2" height="9" rx="4.5" fill="#e8c07a"/>
+<text x="744" y="318" fill="#a89a80" font-family="monospace" font-size="8">1.4% · 4 arq.</text>
+<text x="466" y="337" fill="#f4ecdd" font-family="monospace" font-size="9.5">.yml</text>
+<rect x="530" y="329" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="329" width="2" height="9" rx="4.5" fill="#d4a24e"/>
+<text x="744" y="337" fill="#a89a80" font-family="monospace" font-size="8">1.1% · 3 arq.</text>
+<text x="466" y="356" fill="#f4ecdd" font-family="monospace" font-size="9.5">.gitignore</text>
+<rect x="530" y="348" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="348" width="2" height="9" rx="4.5" fill="#3ddc84"/>
+<text x="744" y="356" fill="#a89a80" font-family="monospace" font-size="8">1.1% · 3 arq.</text>
+<text x="466" y="375" fill="#f4ecdd" font-family="monospace" font-size="9.5">.lock</text>
+<rect x="530" y="367" width="202" height="9" rx="4.5" fill="#1d1729"/>
+<rect x="530" y="367" width="2" height="9" rx="4.5" fill="#a68dad"/>
+<text x="744" y="375" fill="#a89a80" font-family="monospace" font-size="8">1.1% · 3 arq.</text>
+<text x="24" y="420" fill="#77694f" font-family="monospace" font-size="8.5">Última atualização: 20/08/2026 às 21:22</text>
 </svg>
