@@ -306,11 +306,11 @@ def collect_ecosystem() -> dict:
 
 def frame(width: int, height: int) -> list[str]:
     return [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-label="{esc("Análise do ecossistema GitHub de " + USER)}">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" role="img" aria-label="{esc("GitHub de " + USER)}">',
         '<defs><linearGradient id="eco-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e0c16"/><stop offset="1" stop-color="#0b0910"/></linearGradient><linearGradient id="eco-scan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d4a24e" stop-opacity="0"/><stop offset="0.5" stop-color="#e8c07a" stop-opacity="0.9"/><stop offset="1" stop-color="#d4a24e" stop-opacity="0"/></linearGradient></defs>',
         '<rect width="100%" height="100%" rx="14" fill="url(#eco-bg)"/>',
         f'<rect x="5" y="5" width="{width - 10}" height="{height - 10}" rx="11" fill="none" stroke="{GOLD}" stroke-opacity="0.35"/>',
-        f'<text x="28" y="34" fill="{GOLD_LIGHT}" font-family="monospace" font-size="13" font-weight="700" letter-spacing="1.5">◆ {esc("ARSENAL // ANÁLISE DO ECOSSISTEMA")}</text>',
+        f'<text x="28" y="34" fill="{GOLD_LIGHT}" font-family="monospace" font-size="13" font-weight="700" letter-spacing="1.5">◆ {esc("Atividade do Github")}</text>',
         f'<text x="28" y="53" fill="{DIM}" font-family="monospace" font-size="10" letter-spacing="0.8">{esc("linguagens · arquivos · famílias · leitura rápida do portfólio")}</text>',
         f'<line x1="24" y1="66" x2="856" y2="66" stroke="{GOLD}" stroke-opacity="0.25"/>',
         '<rect x="24" y="67" width="205" height="2" fill="url(#eco-scan)" opacity="0.85"/>',
