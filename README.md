@@ -1,18 +1,6 @@
 # Danilo Jesus
 
 <p align="center">
-  <img src="./assets/github-summary.svg" alt="Resumo das métricas do GitHub" />
-</p>
-
-<p align="center">
-  <img src="./assets/github-languages.svg" alt="Linguagens mais utilizadas" />
-</p>
-
-<p align="center">
-  <img src="./assets/github-activity.svg" alt="Atividade recente no GitHub" />
-</p>
-
-<p align="center">
   <img src="./assets/github-ecosystem.svg" alt="Análise do ecossistema público do GitHub" />
 </p>
 
