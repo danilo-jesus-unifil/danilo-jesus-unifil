@@ -1,0 +1,50 @@
+name: Atualizar análise do ecossistema
+
+on:
+  schedule:
+    # Uma vez por semana, aos domingos, sem criar ruído no histórico.
+    - cron: "43 3 * * 0"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/scripts/ecosystem_analysis.py"
+      - ".github/workflows/ecosystem-analysis.yml"
+
+concurrency:
+  group: ecosystem-analysis
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Gerar análise com a API oficial do GitHub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python3 .github/scripts/ecosystem_analysis.py
+
+      - name: Publicar somente se houver mudança real
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-ecosystem.svg
+          if git diff --cached --quiet; then
+            echo "Nenhuma métrica do ecossistema mudou; nenhum commit será criado."
+            exit 0
+          fi
+          git commit -m "chore(bot): atualiza ecossistema do GitHub [skip ci]"
+          git push

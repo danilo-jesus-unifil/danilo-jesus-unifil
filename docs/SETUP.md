@@ -1,23 +1,26 @@
 # Guia de configuração
 
-Este projeto é um painel de perfil para o repositório especial do GitHub. Ele consulta as métricas públicas do usuário `danilo-jesus-unifil`, gera três imagens SVG locais e as exibe no `README.md`.
+Este projeto é um painel de perfil para o repositório especial do GitHub. Ele consulta somente dados públicos do usuário `danilo-jesus-unifil`, gera quatro imagens SVG locais e as exibe no `README.md`. A análise de ecossistema percorre os repositórios públicos próprios, ignora forks e resume linguagens, tipos de arquivo, tamanho aproximado do código e famílias de arquivo.
 
 ## O que foi incluído
 
 | Arquivo | Função |
 | :--- | :--- |
-| `.github/scripts/profile_update.py` | Consulta a API oficial e gera os cartões SVG. |
-| `.github/workflows/profile-update.yml` | Executa a atualização semanal e publica mudanças reais. |
+| `.github/scripts/profile_update.py` | Consulta a API oficial e gera os cartões de métricas do perfil. |
+| `.github/scripts/ecosystem_analysis.py` | Analisa linguagens, árvores Git e famílias de arquivos dos repositórios públicos próprios. |
+| `.github/workflows/profile-update.yml` | Executa a atualização semanal dos cartões de perfil e publica mudanças reais. |
+| `.github/workflows/ecosystem-analysis.yml` | Executa a atualização semanal do ecossistema e publica mudanças reais. |
 | `assets/github-summary.svg` | Resumo de contribuições, commits, PRs, issues e repositórios. |
 | `assets/github-languages.svg` | Principais linguagens dos repositórios públicos. |
 | `assets/github-activity.svg` | Linha de atividade dos últimos 30 dias. |
+| `assets/github-ecosystem.svg` | Linguagens, tipos de arquivo, arquivos totais e famílias do ecossistema público. |
 | `docs/AI-PROMPTS.md` | Prompts prontos para personalização e manutenção. |
 
 ## Primeira ativação
 
 Abra o repositório `danilo-jesus-unifil/danilo-jesus-unifil` no GitHub e confirme que o branch padrão é `main`. Depois, abra **Settings → Actions → General → Workflow permissions** e selecione **Read and write permissions**. Essa permissão permite que o workflow atualize os SVGs no próprio repositório.
 
-Em seguida, abra a aba **Actions**, selecione **Atualizar painel do perfil**, clique em **Run workflow** e execute manualmente a primeira atualização. Depois de concluída, volte ao perfil para confirmar que os três cartões aparecem no README.
+Em seguida, abra a aba **Actions**, execute manualmente **Atualizar painel do perfil** e **Atualizar análise do ecossistema** usando **Run workflow**. Depois de concluídas, volte ao perfil para confirmar que os quatro cartões aparecem no README.
 
 O workflow usa `GITHUB_TOKEN`, um token temporário fornecido pelo próprio GitHub Actions. Não é necessário criar ou colar um token pessoal para o funcionamento normal com repositórios públicos.
 
@@ -28,22 +31,23 @@ Para executar o mesmo gerador na máquina local, é necessário ter Python 3.11 
 ```bash
 export GH_USER=danilo-jesus-unifil
 GITHUB_TOKEN="$(gh auth token)" python3 .github/scripts/profile_update.py
+GITHUB_TOKEN="$(gh auth token)" python3 .github/scripts/ecosystem_analysis.py
 ```
 
 Depois, confira os arquivos alterados:
 
 ```bash
 git status --short
-python3 -m py_compile .github/scripts/profile_update.py
+python3 -m py_compile .github/scripts/profile_update.py .github/scripts/ecosystem_analysis.py
 ```
 
 O script consulta apenas dados públicos e pode fazer várias chamadas à API porque a seção de linguagens precisa verificar os repositórios do usuário. Se o usuário tiver muitos repositórios, a atualização ainda é adequada para uma execução semanal, não horária.
 
 ## Frequência e commits
 
-A atualização está programada para uma vez por semana, aos domingos. Também é possível executá-la manualmente por `workflow_dispatch`.
+As duas atualizações estão programadas para uma vez por semana, aos domingos. Também é possível executá-las manualmente por `workflow_dispatch`. O analisador de ecossistema consulta a lista paginada de repositórios públicos próprios, o endpoint de linguagens e a árvore recursiva do branch padrão de cada repositório. Árvores com `truncated: true` e repositórios que falham são indicados no cartão e não interrompem necessariamente as demais análises.
 
-O script ignora o carimbo de hora quando compara os SVGs antigos com os novos. Assim, uma execução semanal sem alteração nas métricas termina sem criar commit. O projeto não possui monitor de outros repositórios, gerador de commits, contador de streak artificial ou rotina de milhares de commits.
+Os scripts ignoram o carimbo de hora quando comparam os SVGs antigos com os novos. Assim, uma execução semanal sem alteração nas métricas termina sem criar commit. O projeto não possui monitor de outros repositórios, gerador de commits, contador de streak artificial ou rotina de milhares de commits.
 
 ## Personalizar o perfil
 
