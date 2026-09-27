@@ -7,16 +7,16 @@
 <line x1="19" y1="48" x2="499" y2="48" stroke="#d4a24e" stroke-opacity="0.18"/>
 <text x="21" y="69" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">.md</text>
 <rect x="152" y="60" width="227" height="11" rx="5.5" fill="#1d1729"/>
-<rect x="152" y="60" width="99" height="11" rx="5.5" fill="#083fa1"/>
-<text x="391" y="69" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">43.9% · 141 arq.</text>
+<rect x="152" y="60" width="100" height="11" rx="5.5" fill="#083fa1"/>
+<text x="391" y="69" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">44.4% · 144 arq.</text>
 <text x="21" y="87" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">.rs</text>
 <rect x="152" y="78" width="227" height="11" rx="5.5" fill="#1d1729"/>
-<rect x="152" y="78" width="74" height="11" rx="5.5" fill="#dea584"/>
-<text x="391" y="87" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">32.7% · 105 arq.</text>
+<rect x="152" y="78" width="73" height="11" rx="5.5" fill="#dea584"/>
+<text x="391" y="87" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">32.4% · 105 arq.</text>
 <text x="21" y="105" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">.sh</text>
 <rect x="152" y="96" width="227" height="11" rx="5.5" fill="#1d1729"/>
 <rect x="152" y="96" width="19" height="11" rx="5.5" fill="#89e051"/>
-<text x="391" y="105" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">8.7% · 28 arq.</text>
+<text x="391" y="105" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">8.6% · 28 arq.</text>
 <text x="21" y="123" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">.toml</text>
 <rect x="152" y="114" width="227" height="11" rx="5.5" fill="#1d1729"/>
 <rect x="152" y="114" width="6" height="11" rx="5.5" fill="#9c4221"/>
@@ -28,11 +28,11 @@
 <text x="21" y="159" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">.py</text>
 <rect x="152" y="150" width="227" height="11" rx="5.5" fill="#1d1729"/>
 <rect x="152" y="150" width="3" height="11" rx="5.5" fill="#3572A5"/>
-<text x="391" y="159" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">1.6% · 5 arq.</text>
+<text x="391" y="159" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">1.5% · 5 arq.</text>
 <text x="21" y="177" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">License</text>
 <rect x="152" y="168" width="227" height="11" rx="5.5" fill="#1d1729"/>
 <rect x="152" y="168" width="3" height="11" rx="5.5" fill="#8fa6c4"/>
-<text x="391" y="177" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">1.6% · 5 arq.</text>
+<text x="391" y="177" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">1.5% · 5 arq.</text>
 <text x="21" y="195" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">.yml</text>
 <rect x="152" y="186" width="227" height="11" rx="5.5" fill="#1d1729"/>
 <rect x="152" y="186" width="2" height="11" rx="5.5" fill="#cb171e"/>
@@ -73,5 +73,5 @@
 <rect x="152" y="348" width="227" height="11" rx="5.5" fill="#1d1729"/>
 <rect x="152" y="348" width="2" height="11" rx="5.5" fill="#012456"/>
 <text x="391" y="357" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">0.3% · 1 arq.</text>
-<text x="21" y="408" fill="#77694f" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">Última atualização: 20/09/2026 às 08:49</text>
+<text x="21" y="408" fill="#77694f" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">Última atualização: 27/09/2026 às 09:31</text>
 </svg>
