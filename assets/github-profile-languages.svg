@@ -7,30 +7,30 @@
 <line x1="19" y1="48" x2="499" y2="48" stroke="#d4a24e" stroke-opacity="0.18"/>
 <text x="21" y="69" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">Rust</text>
 <rect x="152" y="60" width="227" height="11" rx="5.5" fill="#1d1729"/>
-<rect x="152" y="60" width="189" height="11" rx="5.5" fill="#dea584"/>
-<text x="391" y="69" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">83.5% · 602.7 KB</text>
+<rect x="152" y="60" width="183" height="11" rx="5.5" fill="#dea584"/>
+<text x="391" y="69" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">80.8% · 602.7 KB</text>
 <text x="21" y="87" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">Slint</text>
 <rect x="152" y="78" width="227" height="11" rx="5.5" fill="#1d1729"/>
-<rect x="152" y="78" width="19" height="11" rx="5.5" fill="#2379F4"/>
-<text x="391" y="87" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">8.6% · 62.1 KB</text>
+<rect x="152" y="78" width="18" height="11" rx="5.5" fill="#2379F4"/>
+<text x="391" y="87" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">8.3% · 62.1 KB</text>
 <text x="21" y="105" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">Shell</text>
 <rect x="152" y="96" width="227" height="11" rx="5.5" fill="#1d1729"/>
-<rect x="152" y="96" width="14" height="11" rx="5.5" fill="#89e051"/>
-<text x="391" y="105" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">6.2% · 44.6 KB</text>
-<text x="21" y="123" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">Python</text>
+<rect x="152" y="96" width="13" height="11" rx="5.5" fill="#89e051"/>
+<text x="391" y="105" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">6.0% · 44.6 KB</text>
+<text x="21" y="123" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">HTML</text>
 <rect x="152" y="114" width="227" height="11" rx="5.5" fill="#1d1729"/>
-<rect x="152" y="114" width="2" height="11" rx="5.5" fill="#3572A5"/>
-<text x="391" y="123" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">0.7% · 5.2 KB</text>
-<text x="21" y="141" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">HTML</text>
+<rect x="152" y="114" width="8" height="11" rx="5.5" fill="#e34c26"/>
+<text x="391" y="123" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">3.6% · 27.2 KB</text>
+<text x="21" y="141" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">Python</text>
 <rect x="152" y="132" width="227" height="11" rx="5.5" fill="#1d1729"/>
-<rect x="152" y="132" width="2" height="11" rx="5.5" fill="#e34c26"/>
-<text x="391" y="141" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">0.5% · 3.8 KB</text>
+<rect x="152" y="132" width="2" height="11" rx="5.5" fill="#3572A5"/>
+<text x="391" y="141" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">0.7% · 5.2 KB</text>
 <text x="21" y="159" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">PowerShell</text>
 <rect x="152" y="150" width="227" height="11" rx="5.5" fill="#1d1729"/>
 <rect x="152" y="150" width="2" height="11" rx="5.5" fill="#012456"/>
-<text x="391" y="159" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">0.5% · 3.3 KB</text>
+<text x="391" y="159" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">0.4% · 3.3 KB</text>
 <text x="21" y="177" fill="#f4ecdd" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="11">CSS</text>
 <rect x="152" y="168" width="227" height="11" rx="5.5" fill="#1d1729"/>
 <rect x="152" y="168" width="2" height="11" rx="5.5" fill="#663399"/>
-<text x="391" y="177" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">0.0% · 172 B</text>
+<text x="391" y="177" fill="#a89a80" font-family="'Atkinson Hyperlegible Next', 'Noto Sans', sans-serif" font-size="9">0.0% · 306 B</text>
 </svg>
